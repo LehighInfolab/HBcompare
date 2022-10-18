@@ -39,4 +39,4 @@ To run the notebook with specific parameters, go to the "Parameters" code cell a
 \
 --num_sampled	&emsp; 	Default=512.\
 
-After editing parameters as needed, connect Colab to your google account and run all. The approximate runtime on a machine with 8-core and 32GB ram was ~60 seconds.
+After editing parameters as needed, connect Colab to your google account and run the desired code blocks. There are many code blocks that are repetitions of the HBcompare training block, but with small tweaks for different experiments and uses. The approximate runtime on a machine with 8-core and 32GB ram was 147s, 98s, 634s, 441s and 117s for datasets 1-5 respectively.
