@@ -3,7 +3,7 @@
 HBcompare is a method that classifies protein structures according to ligand binding preference categories by analyzing hydrogen bond topology. This topological analysis applies GCN implementation to the classification of protein classes. HBcompare excludes other characteristics of protein structure so that, in the event of accurate classification, it can implicate the involvement of hydrogen bonds in selective binding.
 
 ## How to use HBcompare -
-HBcompare was implemented in jupyter notebook as a matter of making the code more accessible to someone trying to understand it by manipulating it. This notebook is able to be run on Google Colab as of 9/23/2022.
+HBcompare was implemented in jupyter notebook as a matter of making the code more accessible to anyone wanting to understand the code and manipulate it. This notebook is able to be run on Google Colab as of 10/18/2022. See jupyter notebook for detailed descriptions of functions, how to use, and how the GCN is setup.
 
 
 ## Command-line Options - 
