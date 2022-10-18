@@ -1,0 +1,9 @@
+sz = size(X_feature_tensor,1)
+Graph = graph.empty(sz)
+arr = array.empty(sz)
+for i=1:2
+    temp1=X_feature_tensor(i,:,:)
+    temp2=squeeze(temp1)
+    Graph(i)=graph(temp2)
+end
+

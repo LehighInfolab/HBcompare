@@ -1,0 +1,31 @@
+cp = classperf(label_all, yFit)
+[X,Y,C,AUC] = perfcurve(label_all, yFit, 1)
+clear X
+clear Y
+clear C
+Acc=cp.CorrectRate
+sens=cp.sensitivity;
+spec=cp.specificity;
+
+acc(counter)=Acc
+auc(counter)=AUC
+
+
+m = cp.CountingMatrix
+m(end,:)=[]
+Diagonal=diag(m);
+sum_rows=sum(m,2);
+Precision=Diagonal./sum_rows;
+Overall_Precision=mean(Precision)
+sum_col=sum(m,1);
+recall=Diagonal./sum_col';
+overall_recall=mean(recall)
+F1_Score=2*((Overall_Precision*overall_recall)/(Overall_Precision+overall_recall))
+
+
+clear Diagonal
+clear sum_rows
+clear sum_col
+clear Precision
+
+
