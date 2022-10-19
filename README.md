@@ -6,7 +6,7 @@ HBcompare is a method that classifies protein structures according to ligand bin
 HBcompare was implemented in jupyter notebook as a matter of making the code more accessible to anyone wanting to understand the code and manipulate it. This notebook is able to be run on Google Colab as of 10/18/2022. See jupyter notebook for detailed descriptions of functions, how to use, and how the GCN is setup.
 
 
-## Main function -
+## Main functions -
 
 ### Train HBcompare
 
@@ -25,6 +25,16 @@ Overview:
 
 *** Warning: google colab times out after a while if not constantly interacting, and 10 iteration loops for a dataset can take 2 hrs (650s * 10 iterations) -> for all 5 datasets can take 7-8 hrs. Recommended to run one dataset at a time and make sure to check captcha every once in a while, or run on local jupyter notebook.
 
+### Learning Curve for HBcompare
+
+This function gets the training and testing accuracy of HBcompare and plots the values.
+
+Differences between this and the main HBcompare training function:
+
+- Adds 50 more epochs to show learning curve after maximum saturation
+- Adds predictions on training set to get training accuracy
+- Loops through all datasets in the "all_datasets" list
+- Displays learning curve figures for all datasets
 
 ## Command-line Options - 
 
