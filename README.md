@@ -6,6 +6,26 @@ HBcompare is a method that classifies protein structures according to ligand bin
 HBcompare was implemented in jupyter notebook as a matter of making the code more accessible to anyone wanting to understand the code and manipulate it. This notebook is able to be run on Google Colab as of 10/18/2022. See jupyter notebook for detailed descriptions of functions, how to use, and how the GCN is setup.
 
 
+##
+Main function -
+### Train HBcompare
+
+run_HBCompare_training() function runs the training of graph features in the GCN. 
+
+Overview:
+- Input: The function expects that a dataset has already been loaded, the graphs have been loaded as a graph_pool, and a batch loader created as batch_nodes.
+
+- Output: Performance scores. More scores can be added to be appended to an array while running through iterations, and then printed at the end.
+
+1. The GCN first creates a session and sets up the GCN architecture
+2. An outer for loop goes through all 50 epochs
+3. 2 inner for loops:
+  - First loop does unsupervised training through all graph batches and updates the loss function
+  - 2nd loop does a 5-fold CV and gives the average and stdev of all folds
+
+*** Warning: google colab times out after a while if not constantly interacting, and 10 iteration loops for a dataset can take 2 hrs (650s * 10 iterations) -> for all 5 datasets can take 7-8 hrs. Recommended to run one dataset at a time and make sure to check captcha every once in a while, or run on local jupyter notebook.
+
+
 ## Command-line Options - 
 
 (9/23/2022)
