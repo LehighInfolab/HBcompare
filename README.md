@@ -6,8 +6,8 @@ HBcompare is a method that classifies protein structures according to ligand bin
 HBcompare was implemented in jupyter notebook as a matter of making the code more accessible to anyone wanting to understand the code and manipulate it. This notebook is able to be run on Google Colab as of 10/18/2022. See jupyter notebook for detailed descriptions of functions, how to use, and how the GCN is setup.
 
 
-##
-Main function -
+## Main function -
+
 ### Train HBcompare
 
 run_HBCompare_training() function runs the training of graph features in the GCN. 
